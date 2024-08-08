@@ -1,10 +1,8 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify'
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
 
-Vue.config.productionTip = false
+const vuetify = createVuetify()
 
-new Vue({
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App).use(vuetify).mount('#app')
